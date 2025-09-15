@@ -2,7 +2,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 
 [RequireComponent(typeof(Rigidbody2D))]
-public class PlayerMovement : MonoBehaviour
+public class PlayerMovement : MonoBehaviour, IDataPersistence
 {
     [Header("Movement")]
     public float moveSpeed = 5f;   // bazowa szybko��
@@ -27,6 +27,16 @@ public class PlayerMovement : MonoBehaviour
             moveAction = playerInput.actions["Move"];
             sprintAction = playerInput.actions["Sprint"]; // <-- nowa akcja Sprint
         }
+    }
+
+    public void LoadData(GameData data)
+    {
+        this.transform.position = data.playerPosition;
+    }
+
+    public void SaveData(ref GameData data)
+    {
+        data.playerPosition = this.transform.position;
     }
 
     void OnEnable()
