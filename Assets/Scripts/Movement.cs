@@ -2,15 +2,14 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 
 [RequireComponent(typeof(Rigidbody2D))]
-public class PlayerMovement : MonoBehaviour
+public class Movement : MonoBehaviour, IDataPersistence
 {
-    [Header("Movement")]
-    public float moveSpeed = 5f;   // bazowa szybko��
-    public float sprintMultiplier = 2f; // ile razy szybciej podczas sprintu
+    [Header("Ruch")]
+    public float moveSpeed = 5f;        // podstawowa prędkość
+    public float sprintMultiplier = 2f; // mnożnik sprintu
 
     private Rigidbody2D rb;
     private Vector2 moveInput;
-
     private InputAction moveAction;
     private InputAction sprintAction;
 
@@ -20,13 +19,23 @@ public class PlayerMovement : MonoBehaviour
         rb.gravityScale = 0f;
         rb.freezeRotation = true;
 
-        // Pobieramy PlayerInput z obiektu gracza
         var playerInput = GetComponent<PlayerInput>();
         if (playerInput != null)
         {
             moveAction = playerInput.actions["Move"];
-            sprintAction = playerInput.actions["Sprint"]; // <-- nowa akcja Sprint
+            sprintAction = playerInput.actions["Sprint"];
         }
+    }
+
+    // Implementacja interfejsu IDataPersistence
+    public void LoadData(GameData data)
+    {
+        transform.position = data.playerPosition;
+    }
+
+    public void SaveData(ref GameData data)
+    {
+        data.playerPosition = transform.position;
     }
 
     void OnEnable()
@@ -53,8 +62,6 @@ public class PlayerMovement : MonoBehaviour
     void FixedUpdate()
     {
         float currentSpeed = moveSpeed;
-
-        // Je�li Sprint jest wci�ni�ty ? zwi�ksz pr�dko��
         if (sprintAction != null && sprintAction.IsPressed())
         {
             currentSpeed *= sprintMultiplier;
