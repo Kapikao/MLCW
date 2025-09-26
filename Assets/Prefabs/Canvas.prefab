@@ -36,8 +36,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -9, y: -99}
-  m_SizeDelta: {x: 206.37, y: 91.624}
+  m_AnchoredPosition: {x: 32.884094, y: -188.8601}
+  m_SizeDelta: {x: 386.6761, y: 160.4962}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5394659662379685147
 CanvasRenderer:
@@ -290,8 +290,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -2, y: 12}
-  m_SizeDelta: {x: 204.96, y: 91.62}
+  m_AnchoredPosition: {x: 46, y: 5.57666}
+  m_SizeDelta: {x: 384.0342, y: 160.4892}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1023392169668148211
 CanvasRenderer:
@@ -541,7 +541,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 28, y: 195}
+  m_AnchoredPosition: {x: -25, y: 359}
   m_SizeDelta: {x: 440.1797, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5717956409646902265
@@ -599,8 +599,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 55
-  m_fontSizeBase: 55
+  m_fontSize: 80
+  m_fontSizeBase: 80
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -637,7 +637,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 46.571167, w: 0}
+  m_margin: {x: 0, y: 0, z: -175.32251, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -679,8 +679,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -2, y: 115}
-  m_SizeDelta: {x: 206.37, y: 91.624}
+  m_AnchoredPosition: {x: 46, y: 186}
+  m_SizeDelta: {x: 386.6761, y: 160.4962}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &543039775462738472
 CanvasRenderer:
