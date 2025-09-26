@@ -4,7 +4,7 @@ public class butonswork : MonoBehaviour
 {
     public void LoadFirstScene()
     {
-        SceneManager.LoadScene("scene1");
+        SceneManager.LoadScene("CutScene1");
     }
 
     public void savesload()
