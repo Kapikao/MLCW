@@ -2,17 +2,17 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 public class butonswork : MonoBehaviour
 {
-    public void LoadScene1()
+    public void LoadFirstScene()
     {
         SceneManager.LoadScene("scene1");
     }
 
-    public void LoadSaves()
+    public void savesload()
     {
-        SceneManager.LoadScene("saves");
+        SceneManager.LoadScene("Saves");
     }
-
-    public void Quitgame()
+    
+    public void Quitt()
     {
         Application.Quit();
     }
