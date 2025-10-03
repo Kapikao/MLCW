@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.UI;
+using System.Collections.Generic;
 
 [RequireComponent(typeof(GridLayoutGroup), typeof(RectTransform))]
 public class InventoryUI : MonoBehaviour
@@ -10,15 +11,17 @@ public class InventoryUI : MonoBehaviour
 
     private GridLayoutGroup gridLayout;
     private RectTransform rectTransform;
+    private InventorySlot[,] slots; // tablica slotów
 
     private void Awake()
     {
         gridLayout = GetComponent<GridLayoutGroup>();
         rectTransform = GetComponent<RectTransform>();
 
-        // wa¿ne! Grid musi byæ ustawiony na kolumny
         gridLayout.constraint = GridLayoutGroup.Constraint.FixedColumnCount;
         gridLayout.constraintCount = width;
+
+        slots = new InventorySlot[width, height];
     }
 
     private void Start()
@@ -40,7 +43,6 @@ public class InventoryUI : MonoBehaviour
 
     private void GenerateGrid()
     {
-        // usuñ stare sloty, jeœli istniej¹
         foreach (Transform child in transform)
         {
             Destroy(child.gameObject);
@@ -56,10 +58,17 @@ public class InventoryUI : MonoBehaviour
                 InventorySlot slotScript = slot.GetComponent<InventorySlot>();
                 if (slotScript != null)
                 {
-                    slotScript.x = x;
-                    slotScript.y = y;
+                    slotScript.Init(this, x, y);
+                    slots[x, y] = slotScript;
                 }
             }
         }
+    }
+
+    public InventorySlot GetSlot(int x, int y)
+    {
+        if (x < 0 || x >= width || y < 0 || y >= height)
+            return null;
+        return slots[x, y];
     }
 }
