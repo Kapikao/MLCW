@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 136546e2da352274d9759550b3c78d87
+guid: afc230b5a37b21145bfd217a3b06620a
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -2292952842484940231
-    second: TLOMAINMENU_0
+      213: -4469589756763224087
+    second: drzewko_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: TLOMAINMENU_0
+      name: drzewko_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 1890
-        height: 1417
+        x: 666
+        y: 213
+        width: 558
+        height: 991
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 93286f0d98bcd20e0800000000000000
-      internalID: -2292952842484940231
+      spriteID: 9e747601cc3d8f1c0800000000000000
+      internalID: -4469589756763224087
       vertices: []
       indices: 
       edges: []
@@ -134,8 +134,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      TLOMAINMENU_0: -2292952842484940231
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
